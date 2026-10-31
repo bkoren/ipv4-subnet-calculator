@@ -10,7 +10,7 @@ namespace DZ_LO3
         {
             CallStack.Push(SubnetOption);
 
-            Console.Clear();
+            Program.ClearScreen();
             Console.Write("Enter IPv4 address: ");
             string inputValue_IP = Console.ReadLine();
 
@@ -19,7 +19,7 @@ namespace DZ_LO3
 
             if (!Check.IP_Address(inputValue_IP))
             {
-                Console.Clear();
+                Program.ClearScreen();
                 Console.WriteLine("Error! invaild IPv4 address!");
 
                 Back();
@@ -33,7 +33,7 @@ namespace DZ_LO3
 
             else 
             {
-                Console.Clear();
+                Program.ClearScreen();
                 Console.WriteLine("Error! invaild subnet mask or prefiks!");
 
                 Back();
@@ -44,7 +44,7 @@ namespace DZ_LO3
         {
             CallStack.Push(NetworkOption);
 
-            Console.Clear();
+            Program.ClearScreen();
             Console.Write("Enter number of devices: ");
 
             int.TryParse(Console.ReadLine(), out int value);
@@ -57,7 +57,7 @@ namespace DZ_LO3
             }
             else
             {
-                Console.Clear();
+                Program.ClearScreen();
                 Console.WriteLine("Error! Input value must be a positve number!");
 
                 Back();
@@ -68,7 +68,7 @@ namespace DZ_LO3
         {
             CallStack.Push(BinaryToDecimal);
 
-            Console.Clear();
+            Program.ClearScreen();
             Console.Write("Enter binary number: ");
             string input = Console.ReadLine();
 
@@ -78,7 +78,7 @@ namespace DZ_LO3
             
             else
             {
-                Console.Clear();
+                Program.ClearScreen();
                 Console.WriteLine("Error! Entered number is not binary!");
 
                 Back();
@@ -93,7 +93,7 @@ namespace DZ_LO3
         {
             CallStack.Push(DecimalToBinary);
 
-            Console.Clear();
+            Program.ClearScreen();
             Console.Write("Enter Decimal number: ");
             string input = Console.ReadLine();
 
@@ -103,7 +103,7 @@ namespace DZ_LO3
             
             else
             {
-                Console.Clear();
+                Program.ClearScreen();
                 Console.WriteLine("Erorr! Input must be number!");
 
                 Back();
@@ -131,7 +131,7 @@ namespace DZ_LO3
             }
             else
             {
-                Console.Clear();
+                Program.ClearScreen();
                 Console.WriteLine("Error! inccorrect input. Enter (yes) or (no) options!");
                 BacktoMainMenu_options();
             }

@@ -5,10 +5,10 @@ namespace DZ_LO3
     internal class Program
     {
         static void Main() => Menu();
-        
+
         internal static void Menu()
         {
-            Console.Clear();
+            ClearScreen();
 
             Console.WriteLine("MENU");
             Console.WriteLine("(1) Convert from decimal to binary.");
@@ -18,7 +18,7 @@ namespace DZ_LO3
             Console.Write("Enter option: ");
 
             if (int.TryParse(Console.ReadLine(), out int option))
-                OptionProccess(option);  
+                OptionProccess(option);
             else
                 BackToMenu();
         }
@@ -41,17 +41,23 @@ namespace DZ_LO3
                     break;
                 default:
                     BackToMenu();
-                break;
+                    break;
             }
         }
         private static void BackToMenu()
         {
-            Console.Clear();
+            ClearScreen();
             Console.WriteLine("Invalid option! Enter number in range [1 - 4]. \n");
 
             Console.WriteLine("Press enter for main menu.");
             Console.ReadKey();
             Menu();
+        }
+
+        public static void ClearScreen()
+        {
+            if (!Console.IsOutputRedirected)
+                Console.Clear();
         }
     }
 }
